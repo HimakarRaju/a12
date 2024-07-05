@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HimakarRaju"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-06-24 05:22:17 PM"/>
+        <attribute name="created" value="SGltYWthclJhanU7SElNQUtBUlJBSlU7MjAyNC0wNi0yNDswMzo0OTozNyBQTTszMjA4"/>
+        <attribute name="edited" value="SGltYWthclJhanU7SElNQUtBUlJBSlU7MjAyNC0wNi0yNDswNToyMjoxNyBQTTsxOzMzMDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <input variable="Purchase_Amount"/>
+            <if expression="Purchase_Amount &lt; 50$">
+                <then>
+                    <output expression="5% Discount" newline="True"/>
+                </then>
+                <else>
+                    <if expression="Purchase_Amount &gt;= 50$ &amp;&amp; &lt;= 100$">
+                        <then>
+                            <output expression="10% Discount" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="Purchase_Amount &gt; 100$">
+                                <then>
+                                    <output expression="15% Discount" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

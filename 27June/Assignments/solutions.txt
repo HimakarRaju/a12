@@ -1,0 +1,196 @@
+All Codes at one place to easy access or view
+Name : HimakarRaju Gunda
+Date : 27-06-2024
+Trainer Name : Saynam
+
+Description of program :
+
+"""
+Question1
+
+Write a program that prints all the numbers from 1 to 100. For multiples of three,
+print "Fizz" instead of the number, and for the multiples of five, print "Buzz".
+For numbers that are multiples of both three and five, print "FizzBuzz".
+"""
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+        
+===================================================================================================      
+        
+        
+"""
+Question2
+
+Write a program that asks the user for their first and last name, and
+then prints them in reverse order with a space between them.
+
+Example:
+
+Input: John Doe
+Output: eoD nhoJ
+"""
+
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+print(last_name[::-1] + " " + first_name[::-1])
+
+=====================================================================================================
+
+"""
+Question3
+
+Write a program that takes a list of integers and an integer as input from the user.
+Check if the integer is present in the list.
+If it is, print the index of its first occurrence.
+If it is not, print a message saying the integer is not in the list.
+"""
+
+mylist = input("Enter the numbers with comma separating numbers and press enter : ")
+mylist = mylist.split(",")
+mylist = [int(x) for x in mylist]
+
+myNum = int(input("Enter number you want to check : "))
+
+if myNum in mylist:
+    print(f'{myNum} is in the list')
+else:
+    print(f'{myNum} is not in the list')
+    
+=======================================================================================================    
+    
+"""
+Question4
+
+Write a program that takes a dictionary of student names and their grades. Print the student with the highest grade.
+
+Example:
+students = {"Alice": 88, "Bob": 95, "Charlie": 90}
+Output: Bob
+
+"""
+students = {"Alice": 88, "Bob": 95, "Charlie": 90}
+
+top_student = max(students, key=students.get)
+print(f"The student with the highest grade is: {top_student}")
+
+=======================================================================================================
+
+"""
+Question5
+
+Write a program that takes a list of tuples representing student names and their grades,
+and prints a set of students who scored more than 75.
+
+Example:
+
+students = [("Alice", 88), ("Bob", 72), ("Charlie", 90)]
+Output: {'Alice', 'Charlie'}
+
+"""
+# Example list of tuples with student names and their grades
+students = [("Alice", 88), ("Bob", 72), ("Charlie", 90)]
+
+# Create a set of students who scored more than 75
+top_students = {name for name, grade in students if grade > 75}
+
+# Print the result
+print(f"Students who scored more than 75: {top_students}")
+
+
+
+=======================================================================================================
+
+"""
+Question6
+
+Write a program that reads a file called "input.txt" and
+prints its contents line by line.
+If the file does not exist, print a message saying the file could not be found.
+"""
+import os
+
+# Check if the file exists
+if os.path.isfile("input.txt"):
+    # Open and read the file
+    with open("input.txt", "r") as file:
+        # Print each line in the file
+        for line in file:
+            # 'end' parameter is used to avoid adding extra newlines
+            print(line, end='')
+        file.close()
+else:
+    # Print a message if the file is not found
+    print("The file 'input.txt' could not be found.")
+
+
+
+=======================================================================================================
+
+
+"""
+Question7
+
+Write a program that takes a string as input from the user
+and counts the number of vowels (a, e, i, o, u) in the string.
+
+Example:
+
+Input: hello world
+Output: 3
+
+"""
+# Prompt the user to enter a string
+user_input = input("Enter a string: ")
+
+# Define the vowels
+vowels = "aeiouAEIOU"
+
+# Initialize the count of vowels
+vowel_count = 0
+
+# Iterate through each character in the string and count the vowels
+for char in user_input:
+    if char in vowels:
+        vowel_count += 1
+
+# Print the result
+print(f"Number of vowels: {vowel_count}")
+
+
+
+=======================================================================================================
+
+
+
+
+"""
+Question8
+
+Write a program that takes a list of integers and
+returns a new list containing only the even numbers from the original list.
+Use a list comprehension for this task.
+
+Example:
+
+Input: [1, 2, 3, 4, 5, 6]
+Output: [2, 4, 6]
+
+"""
+# Prompt the user to enter numbers separated by spaces
+input_string = input("Enter a list of integers separated by commas: ")
+
+# Convert the input string to a list of integers
+input_list = [int(x) for x in input_string.split(",")]
+
+# Use a list comprehension to create a new list with only the even numbers and sorted
+even_numbers = sorted([num for num in input_list if num % 2 == 0])
+
+# Print the result
+print(f"Even numbers: {even_numbers}")

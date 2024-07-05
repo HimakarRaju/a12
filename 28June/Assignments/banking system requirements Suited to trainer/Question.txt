@@ -1,0 +1,16 @@
+"""
+Name : HimakarRaju Gunda
+Date : 28-06-2024
+Trainer Name : Saynam
+
+Description of program :
+
+Create a banking system to implement
+1. Create Account
+2. Check Balance
+3. Add Money
+4. Withdraw Money
+5. Check Account Details
+
+Create each function in its own module
+"""

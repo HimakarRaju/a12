@@ -1,0 +1,8 @@
+Assignment 2 [user login.dio]: Flowchart Creation - Design a flowchart that outlines the logic for a user login
+process. It should include conditional paths for successful and unsuccessful login attempts, and a loop that allows
+a user three attempts before locking the account.
+
+Assignment 3: Function Design and Modularization -
+Create a document that describes the design of two modular functions:
+one that returns the factorial of a number, and another that calculates the nth Fibonacci number.
+Include pseudocode and a brief explanation of how modularity in programming helps with code reuse and organization.
